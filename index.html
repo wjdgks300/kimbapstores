@@ -6,7 +6,7 @@
     <title>where kimbap store</title>
   </head>
   <body>
-    <h1><a href="kimbap.html">김밥집 찾기</a></h1>
+    <h1><a href="index.html">김밥집 찾기</a></h1>
     <div id="map" style="width:500px;height:400px;"></div>
   	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	484be972cbd07768a78f2dc1c57cf173"></script>
   	<script>
@@ -17,6 +17,15 @@
   		};
 
   		var map = new kakao.maps.Map(container, options);
+      var places = new kakao.maps.services.Places();
+
+      var callback = function(result, status) {
+          if (status === kakao.maps.services.Status.OK) {
+              console.log(result);
+          }
+      };
+
+places.keywordSearch('김밥', callback);
   	</script>
 </body>
 </html>
