@@ -29,7 +29,7 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 // 마커가 표시될 위치입니다
 var positions =[
   {
-    title: 'asd',
+    title: '다가미',
     lating : new kakao.maps.LatLng(37.498009, 126.953538)
   }
 ];
@@ -43,6 +43,7 @@ for (var i = 0; i < positions.length; i ++) {
   });
 }
 
+marker.setMap(map);
 
 var iwContent = '<div style="padding:5px;">다가미 김밥<br><a href="https://map.kakao.com/link/map/다가미 김밥,37.498009, 126.953538" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/다가미 김밥,37.498009, 126.953538" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
     iwPosition = new kakao.maps.LatLng(37.498009, 126.953538); //인포윈도우 표시 위치입니다
